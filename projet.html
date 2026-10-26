@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Projets — Jean Petitgas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="site-name">Jean Petitgas</a>
+    <nav class="site-nav">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#about">À propos</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="gallery-header-bar">
+    <h1 class="gallery-page-title">
+      <span>Tous les</span>
+      <em>projets.</em>
+    </h1>
+    <p class="gallery-subtitle">Data, développement web, médias et création numérique.</p>
+  </div>
+
+  <div class="gallery-list" id="galleryList">
+
+    <div class="gallery-row" data-index="0">
+      <div class="gallery-row-bg" style="background-image:url('radio.jpg')"></div>
+      <span class="gallery-row-num">01</span>
+      <div class="gallery-row-body">
+        <h2 class="gallery-row-title">Chronique Indépendant Games</h2>
+        <p class="gallery-row-desc">Chronique semi-hebdomadaire sur le jeu vidéo indépendant, diffusée sur Radio Campus Bordeaux.</p>
+      </div>
+      <div class="gallery-row-meta">
+        <span class="gallery-row-cat">Média · Radio</span>
+        <span class="gallery-row-year">2024</span>
+      </div>
+    </div>
+
+    <div class="gallery-row" data-index="1">
+      <div class="gallery-row-bg" style="background-image:url('GameJam.png')"></div>
+      <span class="gallery-row-num">02</span>
+      <div class="gallery-row-body">
+        <h2 class="gallery-row-title">Global Game Jam 2026</h2>
+        <p class="gallery-row-desc">Direction graphique et gestion de la lumière lors d'un game jam en binôme.</p>
+      </div>
+      <div class="gallery-row-meta">
+        <span class="gallery-row-cat">Jeu vidéo · Graphisme</span>
+        <span class="gallery-row-year">2026</span>
+      </div>
+    </div>
+
+    <div class="gallery-row" data-index="2">
+      <div class="gallery-row-bg" style="background-image:url('ndilogo.png')"></div>
+      <span class="gallery-row-num">03</span>
+      <div class="gallery-row-body">
+        <h2 class="gallery-row-title">Nuit de l'Info 2025</h2>
+        <p class="gallery-row-desc">15 heures de développement intensif en équipe — premier déclic vers la création collective.</p>
+      </div>
+      <div class="gallery-row-meta">
+        <span class="gallery-row-cat">Développement · Compétition</span>
+        <span class="gallery-row-year">2025</span>
+      </div>
+    </div>
+
+    <div class="gallery-row" data-index="3">
+      <div class="gallery-row-bg" style="background-image:url('photo.jpg')"></div>
+      <span class="gallery-row-num">04</span>
+      <div class="gallery-row-body">
+        <h2 class="gallery-row-title">Projet Entrepreneurial</h2>
+        <p class="gallery-row-desc">Co-fondation d'une initiative valorisant le savoir-faire artisanal face aux contenus générés par IA.</p>
+      </div>
+      <div class="gallery-row-meta">
+        <span class="gallery-row-cat">Communication · Artisanat</span>
+        <span class="gallery-row-year">2024</span>
+      </div>
+    </div>
+
+    <div class="gallery-row" data-index="4">
+      <div class="gallery-row-bg" style="background-image:url('signals.jpg')"></div>
+      <span class="gallery-row-num">05</span>
+      <div class="gallery-row-body">
+        <h2 class="gallery-row-title">Traitement du Signal EEG</h2>
+        <p class="gallery-row-desc">Analyse de signaux d'électroencéphalogrammes pour la détection de pathologies cérébrales.</p>
+      </div>
+      <div class="gallery-row-meta">
+        <span class="gallery-row-cat">Data · Médecine</span>
+        <span class="gallery-row-year">2024</span>
+      </div>
+    </div>
+
+    <div class="gallery-row" data-index="5">
+      <div class="gallery-row-bg" style="background-image:url('shaders.jpg')"></div>
+      <span class="gallery-row-num">06</span>
+      <div class="gallery-row-body">
+        <h2 class="gallery-row-title">Shaders &amp; Vision — TER</h2>
+        <p class="gallery-row-desc">Travail de fin d'études : shaders en contexte médical pour le traitement de troubles de la vision.</p>
+      </div>
+      <div class="gallery-row-meta">
+        <span class="gallery-row-cat">Recherche · Python</span>
+        <span class="gallery-row-year">2023</span>
+      </div>
+    </div>
+
+    <div class="gallery-row" data-index="6">
+      <span class="gallery-row-num">07</span>
+      <div class="gallery-row-body">
+        <h2 class="gallery-row-title">Projet à venir</h2>
+        <p class="gallery-row-desc">Ce portfolio grandit avec chaque nouvelle expérience.</p>
+      </div>
+      <div class="gallery-row-meta">
+        <span class="gallery-row-cat">En cours</span>
+        <span class="gallery-row-year">—</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="expanded-overlay" class="expanded-overlay">
+    <button class="close-btn" id="closeBtn">Fermer ×</button>
+    <div class="expanded-content-inner" id="overlayInner"></div>
+  </div>
+
+  <!-- Hidden project data -->
+  <div style="display:none">
+
+    <template id="proj-0">
+      <div class="modal-header">
+        <div class="modal-header-top">
+          <span class="modal-num">Projet 01</span>
+          <div class="modal-tags">
+            <span>Média</span><span>Radio</span><span>2024</span>
+          </div>
+        </div>
+        <h3 class="modal-title">Chronique<br>Indépendant Games</h3>
+      </div>
+      <div class="modal-visual"><img src="radio.jpg" alt="Chronique Indépendant Games"></div>
+      <div class="modal-body">
+        <p class="modal-intro">Ma découverte du monde de la radio</p>
+        <div class="modal-text">
+          <p>Animé par l'envie de transmettre ma passion au plus large public, j'ai lancé des chroniques radio dédiées au jeu vidéo indépendant. Je prends le temps de décortiquer une œuvre marquante, avec une mission claire : rendre ce média accessible, même aux non-initiés.</p>
+          <p>L'absence d'image m'impose de peindre avec les mots — une contrainte qui m'oblige à structurer mon récit pour que l'auditeur puisse "voir" uniquement par la voix.</p>
+          <p><strong>Logiciels :</strong> Audacity, DaVinci Resolve</p>
+          <a href="https://soundcloud.com/radiocampusbx/passages-independant-game-9-the-finals" class="modal-link" target="_blank">Écouter une chronique ↗</a>
+        </div>
+      </div>
+    </template>
+
+    <template id="proj-1">
+      <div class="modal-header">
+        <div class="modal-header-top">
+          <span class="modal-num">Projet 02</span>
+          <div class="modal-tags">
+            <span>Jeu vidéo</span><span>Graphisme</span><span>2026</span>
+          </div>
+        </div>
+        <h3 class="modal-title">Global<br>Game Jam</h3>
+      </div>
+      <div class="modal-visual"><img src="GameJam.png" alt="Global Game Jam"></div>
+      <div class="modal-body">
+        <p class="modal-intro">Mon passage derrière la manette</p>
+        <div class="modal-text">
+          <p>La Global Game Jam m'a permis d'explorer la création en temps contraint. En binôme, j'ai pris en charge la direction graphique et la gestion de la lumière — transformer des questionnements théoriques en solutions visuelles concrètes.</p>
+          <p>Ce projet m'a appris à bâtir une ambiance immersive sous pression, et à faire des choix rapides avec un impact visuel fort.</p>
+          <p><strong>Logiciels :</strong> Aseprite, GODOT, GitHub</p>
+        </div>
+      </div>
+    </template>
+
+    <template id="proj-2">
+      <div class="modal-header">
+        <div class="modal-header-top">
+          <span class="modal-num">Projet 03</span>
+          <div class="modal-tags">
+            <span>Développement</span><span>Compétition</span><span>2025</span>
+          </div>
+        </div>
+        <h3 class="modal-title">Nuit de<br>l'Info 2025</h3>
+      </div>
+      <div class="modal-visual"><img src="ndilogo.png" alt="Nuit de l'Info"></div>
+      <div class="modal-body">
+        <p class="modal-intro">Premier déclic vers la création collective</p>
+        <div class="modal-text">
+          <p>Ma première véritable immersion dans le développement intensif : 15 heures non-stop pour livrer un projet fonctionnel en équipe. Plus qu'une compétition de code, un test d'endurance et de cohésion.</p>
+          <p>C'est cette expérience fondatrice qui a pavé la voie vers mes participations aux Game Jams — j'y ai découvert que l'adrénaline de la création collective nourrit plutôt qu'elle n'épuise.</p>
+          <p><strong>Logiciels :</strong> VSCode, Audacity, DaVinci Resolve</p>
+        </div>
+      </div>
+    </template>
+
+    <template id="proj-3">
+      <div class="modal-header">
+        <div class="modal-header-top">
+          <span class="modal-num">Projet 04</span>
+          <div class="modal-tags">
+            <span>Communication</span><span>Artisanat</span><span>2024</span>
+          </div>
+        </div>
+        <h3 class="modal-title">Projet<br>Entrepreneurial</h3>
+      </div>
+      <div class="modal-visual"><img src="photo.jpg" alt="Projet Entrepreneurial"></div>
+      <div class="modal-body">
+        <p class="modal-intro">Valoriser l'humain</p>
+        <div class="modal-text">
+          <p>Co-fondé avec la conviction de redonner ses lettres de noblesse à la création humaine. Dans un contexte où l'IA génère des contenus standardisés, nous avons choisi de mettre en lumière le savoir-faire des artisans locaux.</p>
+          <p>Ce projet est arrivé à son terme, mais il m'a permis de mener une initiative de A à Z et de confirmer mon désir de porter des projets où la technique sert l'émotion et l'humain.</p>
+        </div>
+      </div>
+    </template>
+
+    <template id="proj-4">
+      <div class="modal-header">
+        <div class="modal-header-top">
+          <span class="modal-num">Projet 05</span>
+          <div class="modal-tags">
+            <span>Data</span><span>Médecine</span><span>2024</span>
+          </div>
+        </div>
+        <h3 class="modal-title">Traitement<br>du Signal EEG</h3>
+      </div>
+      <div class="modal-visual"><img src="signals.jpg" alt="Traitement du Signal"></div>
+      <div class="modal-body">
+        <p class="modal-intro">L'analyse au service de la santé</p>
+        <div class="modal-text">
+          <p>Analyse de signaux d'électroencéphalogrammes (EEG) pour mieux comprendre et diagnostiquer certaines pathologies cérébrales. Un déclic sur la puissance des outils mathématiques lorsqu'ils servent la médecine.</p>
+          <p>Ce projet a renforcé ma conviction que la rigueur technique n'a de sens que lorsqu'elle permet de résoudre des problèmes réels.</p>
+          <p><strong>Logiciels :</strong> MATLAB</p>
+        </div>
+      </div>
+    </template>
+
+    <template id="proj-5">
+      <div class="modal-header">
+        <div class="modal-header-top">
+          <span class="modal-num">Projet 06</span>
+          <div class="modal-tags">
+            <span>Recherche</span><span>Python</span><span>2023</span>
+          </div>
+        </div>
+        <h3 class="modal-title">Shaders &amp;<br>Vision — TER</h3>
+      </div>
+      <div class="modal-visual"><img src="shaders.jpg" alt="Shaders TER"></div>
+      <div class="modal-body">
+        <p class="modal-intro">La conclusion de 3 ans de travail</p>
+        <div class="modal-text">
+          <p>Travail d'Étude et de Recherche explorant l'utilisation des shaders en contexte médical — pour compenser ou traiter certains troubles de la vision. Analyse comparative de bibliothèques Python pour identifier les outils les plus performants.</p>
+          <p>Mené en équipe, ce projet a fédéré compétences en programmation, mathématiques et traitement d'image, tout en exigeant une gestion de projet à long terme.</p>
+        </div>
+      </div>
+    </template>
+
+    <template id="proj-6">
+      <div class="modal-header">
+        <div class="modal-header-top">
+          <span class="modal-num">Projet 07</span>
+          <div class="modal-tags"><span>En cours</span></div>
+        </div>
+        <h3 class="modal-title">Projet<br>à venir.</h3>
+      </div>
+      <div class="modal-visual" style="background:var(--bg);display:flex;align-items:center;justify-content:center;">
+        <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(64px,10vw,140px);color:rgba(255,255,255,0.05);letter-spacing:-0.04em;">—</span>
+      </div>
+      <div class="modal-body">
+        <p class="modal-intro">Car j'apprendrai toujours quelque chose de nouveau.</p>
+        <div class="modal-text">
+          <p>Ce portfolio est vivant — il grandit avec chaque nouvelle expérience et chaque nouvelle curiosité. Revenez bientôt.</p>
+        </div>
+      </div>
+    </template>
+
+  </div>
+
+  <script>
+    const overlay      = document.getElementById('expanded-overlay');
+    const overlayInner = document.getElementById('overlayInner');
+    const closeBtn     = document.getElementById('closeBtn');
+    const rows         = document.querySelectorAll('.gallery-row');
+    const galleryList  = document.getElementById('galleryList');
+
+    // Dim siblings
+    galleryList.addEventListener('mouseenter', () => {
+      rows.forEach(r => r.classList.add('dimmed-row'));
+    });
+    galleryList.addEventListener('mouseleave', () => {
+      rows.forEach(r => r.classList.remove('dimmed-row'));
+    });
+    rows.forEach(row => {
+      row.addEventListener('mouseenter', () => row.classList.remove('dimmed-row'));
+      row.addEventListener('mouseleave', () => {
+        if (galleryList.matches(':hover')) row.classList.add('dimmed-row');
+      });
+    });
+
+    // Open modal
+    function openOverlay(index) {
+      const tpl = document.getElementById('proj-' + index);
+      if (!tpl) return;
+      overlayInner.innerHTML = tpl.innerHTML;
+      overlay.classList.add('is-active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeOverlay() {
+      overlay.classList.remove('is-active');
+      document.body.style.overflow = '';
+      setTimeout(() => { overlayInner.innerHTML = ''; }, 320);
+    }
+
+    rows.forEach(row => row.addEventListener('click', () => openOverlay(row.dataset.index)));
+    closeBtn.addEventListener('click', closeOverlay);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeOverlay(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOverlay(); });
+  </script>
+
+</body>
+</html>
